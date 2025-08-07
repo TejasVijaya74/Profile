@@ -1,300 +1,133 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejas - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .section {
-            padding: 6rem 1rem;
-        }
-        @media (min-width: 768px) {
-            .section {
-                padding: 8rem 2rem;
-            }
-        }
-        .glassmorphism {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        /* Added a subtle animation for the hero section */
-        .fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-            opacity: 0;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body class="bg-gray-900 text-gray-200">
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-    <!-- Header & Navigation -->
-    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-700">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-white">Alex Doe</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Projects</a>
-                <a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Skills</a>
-                <a href="#education" class="hover:text-cyan-400 transition-colors duration-300">Education</a>
-                <a href="#achievements" class="hover:text-cyan-400 transition-colors duration-300">Achievements</a>
-                <a href="#blog" class="hover:text-cyan-400 transition-colors duration-300">Blog</a>
-                <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-800">Projects</a>
-            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-800">Skills</a>
-            <a href="#education" class="block py-2 px-6 text-sm hover:bg-gray-800">Education</a>
-            <a href="#achievements" class="block py-2 px-6 text-sm hover:bg-gray-800">Achievements</a>
-            <a href="#blog" class="block py-2 px-6 text-sm hover:bg-gray-800">Blog</a>
-            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-800">Contact</a>
-        </div>
-    </header>
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="min-h-screen flex items-center bg-gray-900">
-             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                    <!-- Profile Picture -->
-                    <div class="fade-in-up w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0">
-                        <img 
-                            src="https://placehold.co/400x400/1f2937/9ca3af?text=Your\nPhoto" 
-                            alt="A professional headshot of Alex Doe" 
-                            class="rounded-full w-full h-full object-cover border-4 border-cyan-500 shadow-lg shadow-cyan-500/20"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Image\nNot\nFound';"
-                        >
-                    </div>
-                    <!-- Introduction Text -->
-                    <div class="fade-in-up text-center md:text-left" style="animation-delay: 0.2s;">
-                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Innovative Problem-Solver & Software Engineer</h1>
-                        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto md:mx-0 mb-8">
-                            Final-year Computer Science Engineering student with a passion for developing scalable software solutions and a proven ability to tackle complex technical challenges. Eager to apply my expertise in full-stack development and machine learning to drive innovation in a dynamic, forward-thinking organization.
-                        </p>
-                        <a href="#projects" class="bg-cyan-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-cyan-600 transition-transform transform hover:scale-105 duration-300 inline-block">View My Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Hey, I'm<br />
+						Tejas Vijaya</h1>
+						<p>turning ideas into real life products is my calling.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-gray-800">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="glassmorphism rounded-lg p-6 flex flex-col hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300">
-                        <h3 class="text-2xl font-bold text-white mb-3">E-commerce Analytics Dashboard</h3>
-                        <p class="text-gray-300 mb-4 flex-grow">Engineered a real-time analytics dashboard for an e-commerce platform, enabling stakeholders to visualize sales trends, customer behavior, and inventory metrics. Optimized data processing pipelines, reducing latency by 40%.</p>
-                        <div class="mb-4">
-                            <span class="inline-block bg-cyan-800 text-cyan-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
-                            <span class="inline-block bg-cyan-800 text-cyan-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Flask</span>
-                            <span class="inline-block bg-cyan-800 text-cyan-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React</span>
-                            <span class="inline-block bg-cyan-800 text-cyan-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">D3.js</span>
-                        </div>
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold mt-auto">View on GitHub &rarr;</a>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="glassmorphism rounded-lg p-6 flex flex-col hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300">
-                        <h3 class="text-2xl font-bold text-white mb-3">Machine Learning-Powered Recommender System</h3>
-                        <p class="text-gray-300 mb-4 flex-grow">Developed a collaborative filtering recommendation engine for a movie streaming service. Implemented using Scikit-learn and Pandas, achieving a 15% improvement in user engagement metrics during A/B testing.</p>
-                        <div class="mb-4">
-                            <span class="inline-block bg-green-800 text-green-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
-                            <span class="inline-block bg-green-800 text-green-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Scikit-learn</span>
-                            <span class="inline-block bg-green-800 text-green-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Pandas</span>
-                            <span class="inline-block bg-green-800 text-green-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">FastAPI</span>
-                        </div>
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold mt-auto">View on GitHub &rarr;</a>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="glassmorphism rounded-lg p-6 flex flex-col hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300">
-                        <h3 class="text-2xl font-bold text-white mb-3">Secure File Sharing Application</h3>
-                        <p class="text-gray-300 mb-4 flex-grow">Constructed a secure, peer-to-peer file sharing desktop application using Java. Implemented end-to-end encryption with AES-256 to ensure data privacy and integrity. Designed a multi-threaded architecture to handle concurrent file transfers efficiently.</p>
-                        <div class="mb-4">
-                            <span class="inline-block bg-red-800 text-red-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Java</span>
-                            <span class="inline-block bg-red-800 text-red-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaFX</span>
-                            <span class="inline-block bg-red-800 text-red-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Cryptography</span>
-                        </div>
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold mt-auto">View on GitHub &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Header -->
+					<header id="header">
+						<a href="elements.html" class="logo">Quick Look</a>
+					</header>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Technical Skills</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <h3 class="text-xl font-bold text-cyan-400 mb-4">Programming Languages</h3>
-                        <ul class="text-gray-300 space-y-2">
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>C++</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-cyan-400 mb-4">Frameworks & Technologies</h3>
-                        <ul class="text-gray-300 space-y-2">
-                            <li>React, Node.js, Express</li>
-                            <li>Spring Boot</li>
-                            <li>Django, Flask</li>
-                            <li>TensorFlow, PyTorch</li>
-                            <li>Docker, Kubernetes</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-cyan-400 mb-4">Tools & Platforms</h3>
-                        <ul class="text-gray-300 space-y-2">
-                            <li>Git & GitHub</li>
-                            <li>AWS (EC2, S3, RDS)</li>
-                            <li>PostgreSQL, MongoDB</li>
-                            <li>Jira, Confluence</li>
-                            <li>Jenkins</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-cyan-400 mb-4">Soft Skills</h3>
-                        <ul class="text-gray-300 space-y-2">
-                            <li>Agile Methodologies</li>
-                            <li>Problem-Solving</li>
-                            <li>Team Collaboration</li>
-                            <li>Technical Communication</li>
-                            <li>Leadership</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="elements.html">about
+							</a></li>
+							<li class="active"><a href="index.html">projects</a></li>
+							<li><a href="generic.html">contact</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://x.com/te" class="icon brands fa-twitter" target="_blank"><span>Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/t74/" class="icon brands fa-linkedin" target="_blank"><span>LinkedIn</span></a></li> 
+							<li><a href="https://github.com/T74" class="icon brands fa-github" target="_blank"><span>GitHub</span></a></li> 
+						</ul>
+						
+					</nav>
 
-        <!-- Education & Resume Section -->
-        <section id="education" class="section bg-gray-800">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Education</h2>
-                <div class="max-w-2xl mx-auto">
-                    <h3 class="text-2xl font-semibold text-cyan-400">Bachelor of Engineering in Computer Science</h3>
-                    <p class="text-lg text-gray-300 mt-2">Global Institute of Technology</p>
-                    <p class="text-md text-gray-400">Expected Graduation: May 2025</p>
-                    <p class="text-md text-gray-400 mt-1">Academic Honor: Dean's List (2022, 2023, 2024)</p>
-                </div>
-                <div class="mt-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Resume</h2>
-                    <a href="#" download="AlexDoe_Resume.pdf" class="bg-transparent border-2 border-cyan-500 text-cyan-500 font-semibold py-3 px-8 rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">Download My CV</a>
-                </div>
-            </div>
-        </section>
+				<!-- Main -->
+					<div id="main">
 
-        <!-- Achievements & Certifications Section -->
-        <section id="achievements" class="section bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Achievements & Certifications</h2>
-                <div class="max-w-3xl mx-auto space-y-6">
-                    <div class="glassmorphism rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-white">Winner, National Smart India Hackathon 2024</h3>
-                        <p class="text-gray-300 mt-2">Led a team of 4 to develop an AI-powered solution for waste management, securing the first place among 200+ teams.</p>
-                    </div>
-                    <div class="glassmorphism rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-white">Google Certified Associate Cloud Engineer</h3>
-                        <p class="text-gray-300 mt-2">Validated expertise in deploying applications, monitoring operations, and managing enterprise solutions on Google Cloud Platform.</p>
-                    </div>
-                     <div class="glassmorphism rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-white">5-Star Coder on CodeChef</h3>
-                        <p class="text-gray-300 mt-2">Consistently ranked among the top competitive programmers, demonstrating strong algorithmic and data structure skills.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h3><a href="#">Bringing Ideas to Life Through Code</h3>
+									<p>Here are some of the projects I've developed and showcased at various events, receiving recognition for creativity and technical execution. Each project reflects my passion for problem-solving and innovation, pushing the boundaries of what's possible with technology. Explore my work below to see how I bring ideas to life through code!</p>
+								</header>
+								<a href="#" class="image main"><img src="images/pic2.jpg" alt="" /></a>
+								<ul class="actions special">
+									<li><a href="#" class="button large">Project Highlights</a></li>
+								</ul>
+							</article>
 
-        <!-- Blog Section -->
-        <section id="blog" class="section bg-gray-800">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Technical Blog</h2>
-                <p class="text-center text-gray-300 max-w-2xl mx-auto mb-8">I believe in sharing knowledge. Here are some of my thoughts on technology, programming, and career development.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Blog Post 1 -->
-                    <div class="glassmorphism rounded-lg p-6 hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300">
-                        <h3 class="text-xl font-bold text-white mb-3">Demystifying REST APIs: A Beginner's Guide</h3>
-                        <p class="text-gray-300 mb-4">A deep dive into the principles of REST and how to design clean, efficient, and scalable APIs using Node.js.</p>
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">Read More &rarr;</a>
-                    </div>
-                    <!-- Blog Post 2 -->
-                    <div class="glassmorphism rounded-lg p-6 hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300">
-                        <h3 class="text-xl font-bold text-white mb-3">Why Every Developer Should Understand Docker</h3>
-                        <p class="text-gray-300 mb-4">Exploring the fundamentals of containerization and how Docker can streamline your development workflow and deployment process.</p>
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">Read More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <!-- Posts -->
+							<section class="posts">
+								<article>
+									<header>
+										<h2><a href="#">AGAM web<br />
+										A orrey web app</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic3.jpg" alt="" /></a>
+									<p>Agam is an interactive orrery web app designed to visualize near-Earth objects using live astronomical data. The project brings the cosmos to life by showcasing detailed, real-time information about celestial bodies. Built using cutting-edge technologies like Three.js and jQuery, Agam pushes the boundaries of web development, offering users an engaging, data-driven exploration of our solar system.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Learn more</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">Emotify<br />
+										Emotion recognizer</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic4.jpg" alt="" /></a>
+									<p>Emotify is an AI-powered emotion recognition system designed to analyze audio files and classify emotions based on speech patterns. Using a deep learning model built with TensorFlow, the system processes Mel-frequency cepstral coefficients (MFCCs) extracted from audio to detect different emotional states. The model, trained on a variety of emotional speech data, can accurately predict emotions from new audio inputs.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Learn more</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">Purr-fessor<br />
+										one paw at a time!</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic5.jpg" alt="" /></a>
+									<p>Purr-fessor is an AI-powered teaching assistant chatbot with a feline personality, designed to make learning fun and engaging. Offering academic support, study tips, and encouragement, Purr-fessor uses a playful cat-inspired charm to assist students. Developed using Vercel and APIs, this project combines advanced technology with a unique approach to education, providing personalized assistance in an interactive and lighthearted manner.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Learn more</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">Signalize<br />
+										Traffic signal system</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic6.jpg" alt="" /></a>
+									<p>Signalize is a project that simulates a traffic light signaling system using Embedded C. It replicates real-world traffic light operations by controlling light sequences, ensuring vehicles move safely at intersections. This project is perfect for learning microcontroller programming, timing functions, and the fundamentals of Embedded C. Developed by integrating hardware control with software logic.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Learn more</a></li>
+									</ul>
+								</article>
+							</section>
+					</div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-gray-900">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
-                <p class="text-gray-300 max-w-xl mx-auto mb-8">I'm currently seeking full-time Software Engineering roles. If you have an opportunity that aligns with my skills and passion, I'd love to connect.</p>
-                <div class="flex justify-center items-center space-x-6">
-                    <a href="mailto:alex.doe@email.com" class="text-cyan-400 hover:text-white transition-colors duration-300 flex items-center space-x-2">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                        <span>alex.doe@email.com</span>
-                    </a>
-                    <a href="#" class="text-cyan-400 hover:text-white transition-colors duration-300">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="#" class="text-cyan-400 hover:text-white transition-colors duration-300">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; TejasVijaya74</li><li>Design: <a>TejasVijaya74</a></li></ul>
+					</div>
 
-    <footer class="bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-400">
-            <p>&copy; 2025 Alex Doe. All Rights Reserved.</p>
-        </div>
-    </footer>
+			</div>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
-    </script>
-</body>
+	</body>
 </html>
 
